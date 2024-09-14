@@ -1,13 +1,15 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Persona {
 
     private int id;
     private String nombre;
     private String apellido;
-    private String fechaDeNacimiento;
+    private LocalDate fechaDeNacimiento;
 
-    public Persona(int id, String nombre, String apellido, String fechaDeNacimiento) {
+    public Persona(int id, String nombre, String apellido, LocalDate fechaDeNacimiento) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -38,11 +40,21 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getFechaDeNacimiento() {
+    public LocalDate getFechaDeNacimiento() {
         return fechaDeNacimiento;
     }
 
-    public void setFechaDeNacimiento(String fechaDeNacimiento) {
+    public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
         this.fechaDeNacimiento = fechaDeNacimiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", fechaDeNacimiento=" + fechaDeNacimiento +
+                '}';
     }
 }

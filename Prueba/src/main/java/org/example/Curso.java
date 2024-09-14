@@ -55,4 +55,15 @@ public class Curso {
     public void setVersion(String version) {
         this.version = version;
     }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", numeroCreditos=" + numeroCreditos +
+                ", version='" + version + '\'' +
+                '}';
+    }
 }
